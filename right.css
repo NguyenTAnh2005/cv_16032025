@@ -14,14 +14,14 @@
     align-items: center;
 }
 
-.right>div:not(:first-child, .go_up) {
+.right>div:not(:first-child) {
     width: 80%;
     margin: 0 auto;
     box-shadow: 0 0 0.5vw 0.5vw rgba(0, 0, 0, 0.5);
     padding: 2.5%;
 }
 
-.right p:not(.language_title, .other_skill_title, .title) {
+.right p:not(.language_title, .other_skill_title, .title, details p) {
     font-size: var(--size_chu_right);
 }
 
@@ -34,21 +34,21 @@
     font-size: calc(var(--size_chu_right) * 1.5);
 }
 
-.right_head_background {
-    margin: 0 auto 5vw;
-    width: 90%;
-    justify-content: center;
+.vietnamese,
+.english {
+    width: 45%;
+    gap: 5%;
 }
 
-.right_head_background img {
-    width: 100%;
-    border-radius: 1rem;
+.switchlang img {
+    width: 20%;
+    border-radius: 50%;
 }
 
+/* RIGHT.1 NÚT CHỌN NGÔN NGỮ */
 .translate {
     width: 30%;
     background-color: var(--vien_color_right);
-    margin: 1.5vw 0;
     margin-left: 7.5%;
     background-color: white;
     outline: 0.1vw solid black;
@@ -82,31 +82,34 @@ details[open] summary::before {
 }
 
 .switchlang {
-    gap: 20%;
     width: 100%;
-    height: 5vh;
-    background-color: white;
+    height: 2vw;
+    background-color: black;
     justify-content: space-evenly;
+    color: white;
 }
 
-.vietnamese,
-.english {
-    width: 45%;
-    gap: 5%;
+/* RIGHT.2 ẢNH NỀN TRÊN CÙNG BÊN RIGHT*/
+.right_head_background {
+    margin: 0 auto 5vw;
+    width: 90%;
+    justify-content: center;
 }
 
-.switchlang img {
-    width: 20%;
-    border-radius: 50%;
+.right_head_background img {
+    width: 100%;
+    border-radius: 1rem;
 }
 
+/* RIGHT.3 TÓM TẮT BẢN THÂN*/
 .abstract .content {
     text-align: justify;
     text-indent: 4vw;
 }
 
+/*RIGHT.4 GIỚI THIỆU BẢN THÂN*/
 .about_me {
-    gap: 1vh;
+    gap: 1vw;
 }
 
 .about_me .items {
@@ -118,24 +121,28 @@ details[open] summary::before {
     margin-left: 5%;
 }
 
+/*RIGHT.4.SEEMOREE XEM THÊM CỦA aBOUT ME*/
 .seemore .seemore_content {
-    gap: 2.5vw;
+    gap: 1.5vw;
 }
 
 .favorite_title,
 .work_title {
-    margin-top: 2.5vw;
     font-weight: 600;
     text-transform: uppercase;
+    font-size: 1vw;
+    margin: 0 auto;
+    margin-top: 1.5vw;
 }
 
+/* RIGHT.4.SEEMORE.FAVORITE*/
 .seemore_content .favorite {
     width: 100%;
     justify-content: space-evenly;
 }
 
 .favorite .favorite_item {
-    width: 20%;
+    width: 15%;
     align-items: center;
 }
 
@@ -144,16 +151,17 @@ details[open] summary::before {
     border-radius: 50%;
 }
 
+/*RIGHT.4.SEEMORE.WORK*/
 .work {
     width: 100%;
     align-items: center;
-    gap: 2.5vw;
+    gap: 1.5vw;
 }
 
 .work_item {
-    width: 90%;
+    width: 75%;
     background-color: var(--vien_color_right);
-    border-radius: 5vw;
+    border-radius: 1rem;
     gap: 5%;
 }
 
@@ -172,10 +180,13 @@ details[open] summary::before {
 }
 
 .work_item img {
-    width: 20%;
-    border-radius: 50%;
+    width: 15%;
+    outline: 1px solid black;
+    border-radius: 1rem;
 }
 
+/* RIGHT.5 SKILL*/
+/*RIGHT.5.LANGUAGE*/
 .language {
     display: flex;
     flex-flow: row wrap;
@@ -225,6 +236,11 @@ details[open] summary::before {
     border-radius: 1rem;
 }
 
+/*RIGHT.5.LANGUAGE.SEEMORE*/
+.language_seemore_content {
+    gap: 0.5vw;
+}
+
 .language_seemore_content .content_item {
     width: 90%;
     margin: 0 auto;
@@ -235,18 +251,25 @@ details[open] summary::before {
 }
 
 .content_item:first-child {
-    margin-top: 2.5vw;
+    margin-top: 1.5vw;
 }
 
-.language_seemore_content {
-    gap: 2.5vw;
+.content_item {
+    gap: 5%;
 }
 
 .content_item img {
-    width: 20%;
+    width: 7.5%;
     border-radius: 50%;
 }
 
+.right .language .seemore_content .content_item p {
+    width: 80%;
+    font-size: 6px;
+    text-align: justify;
+}
+
+/*RIGHT.5.OTHERSKILL*/
 .other_skill,
 .education {
     gap: 1vw;
@@ -267,6 +290,7 @@ details[open] summary::before {
     text-align: start;
 }
 
+/*RIGHT.6.EDUCATION*/
 .education_items .value {
     width: 60%;
 }
@@ -277,6 +301,7 @@ details[open] summary::before {
     margin-left: 10%;
 }
 
+/*RIGHT.7.TARGET*/
 .target {
     gap: 3vh;
 }
@@ -285,6 +310,7 @@ details[open] summary::before {
     text-align: justify;
 }
 
+/*RIGHT.8.PROJECT*/
 .project_items {
     background-color: var(--vien_color_right);
     width: 45%;
@@ -318,6 +344,7 @@ details[open] summary::before {
     margin-left: 70%;
 }
 
+/*RIGHT.9 CONTACT*/
 .contact__me {
     justify-content: space-evenly;
 }
@@ -340,13 +367,10 @@ details[open] summary::before {
     margin: 0 auto;
 }
 
+/*RIGHT.9.CONTACT.INFO*/
 .contactme_info {
     width: 45%;
     gap: 2.5vh;
-}
-
-.contactme_user_info_message {
-    width: 50%;
 }
 
 .contactme_info .info_items {
@@ -363,25 +387,31 @@ details[open] summary::before {
     width: 90%;
 }
 
+/*RIGHT.9_CONTACT.USER*/
 .contactme_user_info_message {
     width: 50%;
-    gap: 2.5vh;
+}
+
+.contactme_user_info_message {
+    width: 50%;
+    gap: 1.5vw;
 }
 
 .contactme_user_info_message input {
-    height: 5vh;
+    height: 2.5vw;
     border: 1px solid gray;
     border-radius: calc(var(--size_chu_right) * 0.25);
 }
 
 .contactme_user_info_message .send_message {
-    width: 100%;
+    width: 50%;
     margin: 0 auto;
     border: none;
+    padding: 2%;
     border-radius: 1vw;
     outline: 2px solid var(--vien_color_right);
     background-color: white;
-    font-size: var(--size_chu_right);
+    font-size: 1vw;
     color: var(--vien_color_right);
 }
 
